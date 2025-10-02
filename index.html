@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Bin2Dec</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Bin2Dec Converter</h1>
+      <form class="bin-converter" novalidate>
+        <label for="binary-input" class="bin-converter__label"
+          >Enter an 8-digit binary number</label
+        >
+        <input
+          type="text"
+          minlength="8"
+          maxlength="8"
+          class="bin-converter__input"
+          required
+          id="binary-input"
+        />
+        <button type="submit" class="bin-converter__button" id="submit-btn">
+          Convert
+        </button>
+        <div class="bin-converter__result">Decimal Result:</div>
+        <input type="text" readonly class="bin-converter__input" />
+      </form>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
