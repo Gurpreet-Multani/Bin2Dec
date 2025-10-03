@@ -41,7 +41,7 @@ Bin2Dec/
 
 ## Live Demo
 
-[Link to Live Demo (if available)]
+[Link to Live Demo ([[if available](https://gurpreet-multani.github.io/Bin2Dec))](https://gurpreet-multani.github.io/Bin2Dec)]
 
 ## Contributing
 
