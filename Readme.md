@@ -47,10 +47,6 @@ Bin2Dec/
 
 Contributions are welcome! If you have any suggestions or find any bugs, please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - This project is part of the "App Ideas" series.

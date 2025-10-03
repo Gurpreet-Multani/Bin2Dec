@@ -1,6 +1,5 @@
-/* General Body Styles */
 body {
-  background-color: #f0f2f5;
+  background-color: #1a1a1a;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
@@ -8,37 +7,58 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-image: url(./matrixBackground.gif);
+  background-size: cover;
+  background-position: center;
+  color: #e0e0e0;
+  overflow: hidden;
 }
 
 h1 {
-  color: #333;
+  color: #00ff00;
   text-align: center;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  animation: neon-flicker 1.5s infinite alternate;
 }
 
-/* Converter Card */
+@keyframes neon-flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .bin-converter {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   background-color: #ffffff;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
   width: 300px;
+  background-color: rgba(30, 30, 30, 0.9);
+  border: 1px solid #00ff00;
+  animation: pulse-border 2s infinite alternate;
 }
 
 .bin-converter__label {
   font-size: 0.9rem;
-  color: #555;
+  color: #b0b0b0;
 }
 
-/* Input Field */
 .bin-converter__input {
   font-size: 1.2rem;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid #555;
   border-radius: 4px;
   transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #333;
+  color: #00ff00;
 }
 
 .bin-converter__input:invalid {
@@ -47,38 +67,61 @@ h1 {
 
 .bin-converter__input:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  border-color: #00ff00;
+  box-shadow: 0 0 0 3px rgba(0, 255, 0, 0.5);
 }
 
-/* Convert Button */
 .bin-converter__button {
   font-size: 1rem;
   padding: 0.75rem;
   background-color: #007bff;
-  color: white;
+  color: #1a1a1a;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s;
+  background-color: #00ff00;
+  font-weight: bold;
+  text-shadow: 0 0 2px #1a1a1a;
 }
 
 .bin-converter__button:hover {
-  background-color: #0056b3;
+  background-color: #33ff33;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+  transform: translateY(-2px);
 }
 
-/* Result Display */
 .bin-converter__result {
   margin-top: 1rem;
   text-align: center;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 1.2rem;
+  color: #e0e0e0;
 }
 
 .bin-converter__result p {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #0056b3;
+  color: #00ff00;
   margin: 0.5rem 0 0 0;
-  min-height: 1.5rem; /* Prevents layout shift */
+  min-height: 1.5rem;
+  text-shadow: 0 0 5px #00ff00;
+  animation: result-glow 1s infinite alternate;
+}
+
+@keyframes result-glow {
+  0% {
+    text-shadow: 0 0 5px #00ff00;
+  }
+  100% {
+    text-shadow: 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+}
+
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8);
+  }
 }
